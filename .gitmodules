@@ -1,0 +1,3 @@
+[submodule "silky/lib/forge-std"]
+	path = silky/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
