@@ -1,10 +1,19 @@
 
 i call the withdrawer = Wuser , 
         the depositor = Duser .
-        
-+user withdr req+ --> bundler API --> 
 
-factory contract create a unique Abstract Account Contract for each Wusre, 
+
+
+Duser --> deposit contract       
+(+Wuser req+ --> factoryContract --> Abstract Account creation -> ) setup process only once per account
++offchain Wuser req+ -> userOp creation by Dapp UI -> bundler API -> +EntryPoint Contract+ submittion -> paymaster contract -> withdrawl contract call
+
+implement factoryContract
+implement paymasterContract
+
+
+
+factoryContract creates a unique Abstract Account Contract for each Wusre, 
 
 A user wants to withdraw in a dApp that leverages Account Abstraction and gas sponsorship.
  The app has a *withdraw* contract,
